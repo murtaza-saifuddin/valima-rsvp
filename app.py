@@ -2,7 +2,7 @@ from datetime import datetime
 from flask import Flask, flash, redirect, render_template, request, url_for
 import requests
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='.')
 app.secret_key = "your_secure_random_secret_key"
 
 GOOGLE_SHEET_WEBHOOK_URL = (
